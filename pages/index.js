@@ -1,10 +1,14 @@
 import React from 'react'
 import fs from 'fs/promises'
 import path from 'path'
+import Link from 'next/link'
 const Home = (props) => {
   const { products } = props
+  const handleClick = (id) => {
+    console.log(id)
+  }
   return (
-    <div>{products.map(v => <li key={v.id}>{v.title}</li>)}</div>
+    <div>{products.map(v => <li key={v.id}><Link href={`/${v.id}`}>{v.title}</Link></li>)}</div>
   )
 }
 export async function getStaticProps() {
