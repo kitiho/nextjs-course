@@ -15,7 +15,8 @@ export async function getStaticProps() {
     props: {
       products: data.products,
     },
-    revalidate: 10
+    revalidate: 10,
+    notFound: true
   }
 }
 export default Home
