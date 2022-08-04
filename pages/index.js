@@ -15,6 +15,7 @@ export async function getStaticProps() {
     props: {
       products: data.products,
     },
+    revalidate: 10
   }
 }
 export default Home
